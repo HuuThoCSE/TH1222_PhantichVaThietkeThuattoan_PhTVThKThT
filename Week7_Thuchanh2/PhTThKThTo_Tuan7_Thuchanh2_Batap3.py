@@ -28,6 +28,7 @@ class Danhsach:
             if value == x:
                 self.data[index] = y
 
+
 class Sapxep(Danhsach):
     def merge(self, left, right):
         result = []
@@ -56,41 +57,10 @@ class Sapxep(Danhsach):
     def sap_xep(self):
         self.data = self.merge_sort()
 
-class Sapxep_N2(Sapxep):
-    def bubble_sort(self):
-        for i in range(len(self.ds) - 1):
-            for j in range(len(self.ds) - 1, i, -1):
-                if self.ds[j] < self.ds[j - 1]:
-                    self.ds[j], self.ds[j - 1] = self.ds[j - 1], self.ds[j]
-
-    def bubble_sort_improved(self):
-        n = len(self.ds)
-        swapped = True
-        while swapped:
-            swapped = False
-            for i in range(1, n):
-                if self.ds[i - 1] > self.ds[i]:
-                    self.ds[i], self.ds[i - 1] = self.ds[i - 1], self.ds[i]
-                    swapped = True
-            n -= 1
-
-if __name__ == "__main__":
-    ds = Danhsach()
-
-    ds.nhap(5)
-    ds.xuat()
-
-    ds.them(10)
-    ds.xuat()
-
-    ds.xoa(10)
-    ds.xuat()
-
-    vi_tri = ds.tim(3)
-    if vi_tri != -1:
-        print(f"Số 3 tìm thấy tại vị trí: {vi_tri}")
-    else:
-        print("Số 3 không tìm thấy trong danh sách")
-
-    ds.sua(1, 20)
-    ds.xuat()
+ds_sapxep = Sapxep()
+ds_sapxep.nhap()
+print("Danh sách trước khi sắp xếp:")
+ds_sapxep.xuat()
+ds_sapxep.sap_xep()
+print("Danh sách sau khi sắp xếp:")
+ds_sapxep.xuat()
