@@ -26,3 +26,11 @@ Lặp lại bước 1-5 cho đến khi toàn bộ danh sách được sắp xế
 - Bubble Sort và cải tiến
 
 Bubble Sort cải tiến (còn gọi là Cocktail Shaker Sort) là một biến thể của thuật toán Bubble Sort. Thuật toán này hoạt động bằng cách sắp xếp danh sách từ cả hai phía: từ trái sang phải và từ phải sang trái. Điều này giúp giảm thời gian sắp xếp đáng kể so với thuật toán Bubble Sort thông thường.
+
+Hàm optimized_bubble_sort thực hiện Bubble Sort cải tiến như sau:
+
+1. Đặt biến left và right là chỉ số bên trái và bên phải của phần chưa được sắp xếp.
+2. Sắp xếp từ trái sang phải và cập nhật chỉ số phải của phần chưa được sắp xếp (right).
+3. Sắp xếp từ phải sang trái và cập nhật chỉ số trái của phần chưa được sắp xếp (left).
+4. Lặp lại bước 2-3 cho đến khi phần chưa được sắp xếp trở nên rỗng (left >= right).
+Bạn có thể thay thế hàm bubble_sort hiện tại trong lớp Sapxep_NMu2 của bạn bằng hàm optimized_bubble_sort để tận dụng lợi ích của thuật toán Bubble Sort cải tiến.
